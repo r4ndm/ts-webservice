@@ -1,0 +1,37 @@
+{
+  "name": "typescript-webservice",
+  "version": "1.0.0",
+  "description": "Webservice, typescript, node, express",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "prebuild": "npm run lint",
+    "build": "tsc",
+    "watch": "tsc -w -p ./",
+    "prestart": "npm run build",
+    "start": "node dist/index.js",
+    "dev:start": "npm run build && nodemon --legacy-watch",
+    "release:start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r4ndm/ts-webservice.git"
+  },
+  "keywords": [],
+  "author": "randm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/r4ndm/ts-webservice/issues"
+  },
+  "homepage": "https://github.com/r4ndm/ts-webservice#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.1",
+    "@types/node": "^10.12.21",
+    "tslint": "^5.12.1",
+    "typescript": "^3.3.1"
+  }
+}

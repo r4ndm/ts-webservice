@@ -1,0 +1,12 @@
+
+# dependencies
+/node_modules
+
+# compiled output
+/dist
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
