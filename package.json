@@ -26,6 +26,8 @@
   },
   "homepage": "https://github.com/r4ndm/ts-webservice#readme",
   "dependencies": {
+    "@types/bunyan": "^1.8.5",
+    "bunyan": "^1.8.12",
     "express": "^4.16.4"
   },
   "devDependencies": {

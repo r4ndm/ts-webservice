@@ -1,15 +1,8 @@
+import * as Logger from 'bunyan';
+import { ExpressFactory } from './express.factory';
 
-import express from 'express';
+const logger = Logger.createLogger( { name: 'applogger' } );
+const app = new ExpressFactory(logger);
 
-const port = 8080;
-const app = express();
-
-app.get('/api/users', ( req, res ) => {
-   const data: string[] = ['user1', 'user2', 'user3'];
-   res.json(data);
-});
-
-app.listen(port, () => {
-   console.log(`server started at http://localhost:${port}`);
-});
+app.startServer();
 
